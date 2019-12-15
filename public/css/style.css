@@ -1,0 +1,471 @@
+
+* {
+	box-sizing: border-box;
+}
+body {
+	background-color: gray;
+	overflow-x:hidden;
+}
+nav {
+	position:fixed;
+	z-index: 1;
+	width: 250px;
+	height: 100%;
+	left: 0;
+	top: 0;
+	background-color: silver;
+	overflow: hidden;
+	transition: transform 0.5s ease;
+}
+aside.bar {
+	font-family: 'Asar';
+	padding: 40px 20px;
+}
+	aside.bar div.imgAside {
+		width: 130px;
+		height: 140px;
+		overflow: hidden;
+		border-radius: 10px;
+		margin-left: 15px;
+		}
+		div.imgAside img {
+			width: 220%;
+			margin-left: -20px;
+		}
+	aside.bar h3 {
+		text-transform: uppercase;
+		font-size: 1.5em;
+		margin-bottom: 0em;
+		}
+	aside.bar p {
+		text-transform: capitalize;
+		font-style: italic;
+		font-size: 1.1em;
+		margin-top: 0em;
+		margin-bottom: 0;
+		}
+	aside.bar div.menuAside {
+		display: grid;
+		grid-template-columns: auto;
+		grid-template-rows: auto auto auto;
+		margin-top: 0.3em;
+		}
+		div.menuAside > div.hover {
+			display: grid;
+			grid-template-columns: 30px auto;
+			grid-column-gap: 10px;
+		}
+		aside.bar div.hover {
+			color: black;
+			margin-left: -20px;
+			padding-left: 20px;
+			margin-right: -20px;
+			padding-right: 20px;
+			}
+		
+		aside.bar div.hover:hover {
+			background-color: white;
+			}
+			aside.bar div.hover a:hover {
+				font-weight: bold;
+				color:green;
+				}
+			aside.bar > div.menuAside a {
+				color: black;
+				text-decoration: none;
+				text-transform: uppercase;
+				font-size: 1.3em;
+				line-height: 1.7em;
+				}
+			aside.bar > div.menuAside span {
+				text-align: left;
+				font-size: 1.3em;
+			}
+
+article.primarily {
+	margin-left: 260px;
+	font-family: 'Asar';
+	margin-right: 10px;
+	font-size: 1.3em;
+	transition: margin-left 0.5s ease;
+}
+	article.primarily > header.title > h1 {
+		font-size: 2em;
+		text-transform: capitalize;
+		margin: 0em auto;
+		}
+		header.title a, header.title span {
+			color: white;
+			margin-top: 0.8em;
+			display: inline-block;
+			text-decoration: none;
+			text-transform: capitalize;
+			font-size: 1.2em;
+			line-height: 1.5em;	
+			}
+		header.title a {
+			background-color: silver;
+			padding: 3px 13px;
+			}
+		header.title a:hover {
+			background-color: black;
+			}
+		article.primarily > hr {
+			margin-bottom: 1.4em;
+			border: 2px solid darkgray;
+			box-shadow: 0px 3px 2px silver;
+		}
+	article.primarily > main.container {
+		display: grid;
+		width: 100%;
+		grid-template-columns: repeat(3, 1fr);
+		grid-gap: 0.8em;
+		}
+		article.primarily > main.container div.content {
+			width: 100%;
+			background-color: white;
+			border-radius: 10px;
+			-webkit-border-radius: 10px;
+			-moz-border-radius: 10px;
+			transition: 0.3s ease-out;
+			overflow-y: hidden;
+			overflow-x: hidden;
+			}
+		main.container div.content:hover {
+			transform: scale(1.01);
+			box-shadow: 0 0 1em rgba(255, 255, 255, 0.5);
+			-webkit-appearance: none;
+			-moz-appearance: none;
+			appearance: none;
+			border-radius: 0px !important;
+			-webkit-border-radius: initial;
+			-moz-border-radius: initial;
+		}
+			main.container > div.content p {
+				margin: 0.5em 0.7em;
+				text-align: justify;
+				overflow-y: auto;
+				}
+			div.content h3 {
+				margin: 0.5em 0.7em;
+				overflow: hidden;
+				}
+				div.content h3 > span {
+				text-align: left;
+				transition: 2s ease;
+				white-space: nowrap;
+				}
+				span.showHide {
+					position: relative;
+					color: white;
+					margin-left: 0.5em;
+					opacity: 0;
+					transform: scale(0,0);
+					cursor: pointer;
+					-webkit-transition: 0.3s ease;
+					transition: 0.3s ease;
+					}
+				span.showHide::after {
+					content: '';
+					opacity: inherit;
+					position: absolute;
+					top: 2px;
+					left: -6px;
+					right: -6px;
+					bottom: 2px;
+					z-index: -1;
+					background-color: silver;
+					border-radius: 25px;
+					-webkit-transition: inherit;
+					transition: inherit;
+					transform: inherit;
+					}
+				div.content p:hover span.showHide {
+					opacity: 1;
+					transform: scale(0.9,0.9);
+					-webkit-transition: 0.3s ease;
+					transition: 0.3s ease;
+				}
+			main.container > div.content figure {
+				height: 184px;
+				margin: 0px;
+				width: 100%;
+				overflow: hidden;
+				}
+				main.container > div.content img {
+					width: 100%;
+					object-fit: cover;
+					transition: 0.3s ease-out;
+					}
+				div.content:hover img {
+					transform: scale(1.05);
+				}
+		article.primarily > div.page {
+			font-size: 1.5em;
+			text-align: center;
+			margin: 2em auto;
+			
+			}
+			article.primarily > div.page input {
+				background-color: gray;
+				border: none;
+				font-size: 0.7em;
+				color: white;
+				width: 40px;
+				height: 40px;
+				cursor: pointer;
+				}
+			article.primarily > div.page input:hover {
+				background-color: black;
+				}
+		article.primarily > section.onePuch figure {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			grid-gap: 0.8em;
+			margin: 0;
+			}
+		section.onePuch > div {
+			position: relative;
+			overflow: hidden;
+			}
+		#readMore {
+			position: absolute;
+			display: none;
+			top: 0px;
+			right: 0px;
+			bottom: 0px;
+			left: 0px;
+			background-image: linear-gradient(to bottom, rgba(255, 225, 225, 0) 75%, rgba(225, 225, 225, 1) 95%);
+			}
+			#readMore span {
+				position: absolute;
+				left: 8px;
+				bottom: 4px;
+				z-index: 2;
+				color: blue;
+				text-decoration: underline;
+				cursor: pointer;
+				}
+			section.onePuch h3 {
+				text-transform: capitalize;
+				margin-bottom: 0;
+				}
+			section.onePuch p {
+				text-align: justify;
+				margin-top: 0.3em;
+				}
+			section.onePuch figure div {
+				width: 100%;
+				height: 50vh;
+				overflow: hidden;
+				margin: 0;
+				}
+				section.onePuch figure img {
+					width: 100%;
+					}
+				section.onePuch figure div:first-child img {
+					width: 130%;
+					margin-left: -20%;
+					}
+		section.parentFloat > h3 {
+			text-transform: capitalize;
+			margin-bottom: 0;
+		}
+		section.parentFloat > div.parent div {
+			line-height: 40px;
+			}
+			div.parent > p {
+				font-style: italic;
+				margin-top: 0.5em;
+				margin-bottom: -0.1em;
+			}
+			section.parentFloat > div.parent div.childL {
+				background-color: #f1f1f1;
+				color: red;
+				text-align: center;
+				}
+			section.parentFloat > div.parent div.child:nth-child(4) {
+				display: grid;
+				grid-template-columns: 99% 1%;
+				background-color: green;
+				}
+			section.parentFloat > div.parent div.child:nth-child(6) {
+				display: grid;
+				grid-template-columns: 90% 10%;
+				background-color: green;
+				}
+			section.parentFloat > div.parent div.child:nth-child(8) {
+				display: grid;
+				grid-template-columns: 70% 30%;
+				background-color: green;
+				}
+			section.parentFloat > div.parent div.child:nth-child(10) {
+				display: grid;
+				grid-template-columns: 50% 50%;
+				background-color: green;
+				}
+		div.OtherChar > h3 {
+			text-transform: capitalize;
+			}
+		div.tableChar {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			grid-gap: 0.5em;
+			}
+		table, tr, td, th {
+			border: 1px solid gray;
+			border-collapse: collapse;
+			text-align: center;
+			}
+		div.tableChar > table {
+			width: 100%;
+			font-family: 'Adamina';
+			}
+		div.tableChar td {
+			height: 3em;
+			background-color: rgba(225, 225, 225, 0.9);
+		}
+			div.tableChar th.img {
+				height: 9em;
+				background-repeat: no-repeat;
+				background-position: center center;
+				background-size: cover;
+				vertical-align: bottom;
+				}
+			th.img.Genos {
+				background-image: url("../images/one-punch-man-genos-15599666452941198029471.jpg");
+				}
+			th.img.Fang {
+				background-image: url("../images/Silver-Fang--1024x493.png");
+				}
+			th.Tatsumaki {
+				background-image: url("../images/anime_anime_girls_One_Punch_Man_Tatsumaki-1375293.jpg");
+				}
+			th.img span {
+				position: relative;
+				bottom: 5px;
+				padding: 0px 6px;
+				background-color: rgba(225, 225, 225, 0.5);
+				transition: opacity 1s ease;
+				}
+			th.img:hover span {
+				opacity: 0;
+				-webkit-transition: opacity 1s ease;
+				}
+			div.tableChar td.footTable {
+				height: 5em;
+				background-color: rgba(1, 1, 1, 0.1);
+			}
+			div.tableChar input {
+				font-family: 'Adamina';
+				font-size: 1em;
+				line-height: 1em;
+				padding: 10px 18px;
+				background-color: rgba(225, 225, 225, 0.5);
+				border: none;
+				}
+			div.tableChar input:hover {
+				background-color: black;
+				color: white;
+			}
+		div.aboutMe {
+			position: relative;
+		}
+		div.aboutMe::after {
+			content: "";
+			position: absolute;
+			top: 0px;
+			bottom: -20px;
+			right: -20px;
+			left: -20px;
+			background-color: rgba(255, 255, 255, 0.8);
+			z-index: -1;
+		}
+		div.aboutMe h3 {
+			text-transform: capitalize;
+			}
+		div.aboutMe > section {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			background-color: rgba(1, 1, 1, 0.2);
+			}
+			div.aboutMe > section div {
+				height: 5em;
+				text-align: center;
+				}
+				div.aboutMe > section p {
+					margin: 0;
+					color: white;
+					}
+				div.aboutMe > section span {
+					position: relative;
+					top: 0.15em;
+					line-height: 1em;
+					font-size: 2.5em;
+					color: white;
+					}
+				div.aboutMe > section div:nth-child(2) {
+					background-color: darkgreen;
+					}
+			div.aboutMe > hr {
+				margin: 25px 0 15px 0;
+				}
+		div.form {
+			margin-top: 0;
+			padding-top: 0;
+			}
+			div.form input[type=text], input[type=email] {
+				width: 100%;
+				height: 2em;
+				font-family: "Asar";
+				font-size: 1em;
+				}
+			div.form input[type=button] {
+				height: 2em;
+				font-family: "Asar";
+				font-size: 1em;
+				padding-right: 20px;
+				padding-left: 20px;
+				margin-top: 0.7em;
+				border: none;
+				background-color: black;
+				color: white;
+				}
+			div.form input[type=button]:hover {
+				color: black;
+				background-color: silver;
+				}
+
+@media screen and (max-width: 1000px) {
+	nav {
+		transform: translateX(-100%);
+		-webkit-transition: transform 0.5s ease;
+		transition: transform 0.5s ease;
+	}
+
+	article.primarily {
+		margin-left: 5px;
+		-webkit-transition: margin-left 0.5s ease;
+		transition: margin-left 0.5s ease;
+	}
+}
+@media screen and (max-width: 750px) {
+	article.primarily > main.container {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+	}
+	div.aboutMe > section {
+		display: grid;
+		grid-template-columns: repeat(1, 1fr);
+		}
+}
+@media screen and (max-width: 550px) {
+	div.tableChar {
+		display: grid;
+		grid-template-columns: repeat(1, 1fr);
+		}
+	article.primarily > main.container {
+		display: grid;
+		grid-template-columns: repeat(1, 1fr);
+	}
+}
